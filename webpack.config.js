@@ -20,6 +20,7 @@ fs.readdirSync('node_modules')
 module.exports = {
   entry: './src/main.js',
   target: 'node',
+  mode: process.env.NODE_ENV || 'development',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'addons-linter.js',
